@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
 
-	let who = ['El perro','Mi abuela','Su tortuga','My pajaro'];
+	let who = ['El perro','Mi abuela','Su tortuga','Mi pajaro'];
 	let what = ['come','molesta','lo aplasta','lo rompe'];
 	let when = ['antes de clase','justo a tiempo','cuando termine','durante el almuerzo','mientras oraba'];
 
