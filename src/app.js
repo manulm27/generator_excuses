@@ -1,11 +1,31 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+window.addEventListener("load", function(){
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+	let who = ['El perro','Mi abuela','Su tortuga','My pajaro'];
+	let what = ['come','molesta','lo aplasta','lo rompe'];
+	let when = ['antes de clase','justo a tiempo','cuando termine','durante el almuerzo','mientras oraba'];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+	function generate_word(arr, num){
+		var word;
+		var random = Math.random()
+		if(random < num){
+			random = 0
+		}else{
+			random = Math.floor(random*arr.length)
+		}
+		for(var i = 0; i <= random; i++){
+			word = arr[i]
+		}
+		return word
+	}
+
+	function onLoad(){
+		var excuse = generate_word(who, 0.3)+" "+generate_word(what,0.3)+" "+generate_word(when, 0.2);
+		var text = document.querySelector('#excuse')
+		text.innerHTML = excuse
+	};
+
+	document.querySelector('#generator').addEventListener("click", function(){
+		onLoad();
+	});
+
+})
