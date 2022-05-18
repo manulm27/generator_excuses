@@ -12,14 +12,14 @@ window.addEventListener("load", function() {
   function generate_word(arr, num) {
     var word;
     var random = Math.random();
-    if (random < num) {
-      random = 0;
-    } else {
-      random = Math.floor(random * arr.length);
-    }
-    for (var i = 0; i <= random; i++) {
-      word = arr[i];
-    }
+      if (random < num) {
+        random = 0;
+      } else {
+        random = Math.floor(random * arr.length);
+      }
+      for (var i = 0; i <= random; i++) {
+        word = arr[i];
+      }
     return word;
   }
 
@@ -30,11 +30,11 @@ window.addEventListener("load", function() {
       generate_word(what, 0.3) +
       " " +
       generate_word(when, 0.2);
-    var text = document.querySelector("#excuse");
-    text.innerHTML = excuse;
+      var text = document.querySelector("#excuse");
+      text.innerHTML = excuse;
   }
 
   document.querySelector("#generator").addEventListener("click", function() {
-    onLoad();
+      onLoad();
   });
 });
