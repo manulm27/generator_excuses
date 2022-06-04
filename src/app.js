@@ -9,27 +9,22 @@ window.addEventListener("load", function() {
     "mientras oraba"
   ];
 
-  function generate_word(arr, num) {
+  function generateWord(arr){
     var word;
-    var random = Math.random();
-      if (random < num) {
-        random = 0;
-      } else {
-        random = Math.floor(random * arr.length);
-      }
-      for (var i = 0; i <= random; i++) {
-        word = arr[i];
-      }
+    var random = Math.floor(Math.random() * arr.length);
+    for(var i = 0; i <= random; i++){
+      word = arr[i];
+    }
     return word;
   }
 
   function onLoad() {
     var excuse =
-      generate_word(who, 0.3) +
+      generateWord(who) +
       " " +
-      generate_word(what, 0.3) +
+      generateWord(what) +
       " " +
-      generate_word(when, 0.2);
+      generateWord(when);
       var text = document.querySelector("#excuse");
       text.innerHTML = excuse;
   }
@@ -37,4 +32,6 @@ window.addEventListener("load", function() {
   document.querySelector("#generator").addEventListener("click", function() {
       onLoad();
   });
+
 });
+
