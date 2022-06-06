@@ -9,10 +9,10 @@ window.addEventListener("load", function() {
     "mientras oraba"
   ];
 
-  function generateWord(arr){
+  function generateWord(arr) {
     var word;
     var random = Math.floor(Math.random() * arr.length);
-    for(var i = 0; i <= random; i++){
+    for (var i = 0; i <= random; i++) {
       word = arr[i];
     }
     return word;
@@ -20,18 +20,12 @@ window.addEventListener("load", function() {
 
   function onLoad() {
     var excuse =
-      generateWord(who) +
-      " " +
-      generateWord(what) +
-      " " +
-      generateWord(when);
-      var text = document.querySelector("#excuse");
-      text.innerHTML = excuse;
+      generateWord(who) + " " + generateWord(what) + " " + generateWord(when);
+    var text = document.querySelector("#excuse");
+    text.innerHTML = excuse;
   }
 
   document.querySelector("#generator").addEventListener("click", function() {
-      onLoad();
+    onLoad();
   });
-
 });
-
