@@ -17,7 +17,7 @@ const when = [
 function generateWord(arr) {
   let word;
   let random = Math.floor(Math.random() * arr.length);
-  for (var i = 0; i <= random; i++) {
+  for (let i = 0; i <= random; i++) {
     word = arr[i];
   }
   return word;
