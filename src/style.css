@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-=======
->>>>>>> e4d3708ce0122713b27d0fa150f2f2567e6b6b33
 .container {
   width: 70%;
   height: 400px;
@@ -34,9 +31,6 @@ section p {
 
 #generator {
   text-align: center;
-<<<<<<< HEAD
   border: 1px solid black;
   border-radius: 2px;
-=======
->>>>>>> e4d3708ce0122713b27d0fa150f2f2567e6b6b33
 }
